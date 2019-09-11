@@ -44,6 +44,7 @@ class MyFavoriteTableViewController: UIViewController,UITableViewDelegate,UITabl
         tableView?.dataSource = self
         tableView?.separatorStyle = .none
         tableView?.estimatedSectionFooterHeight = 0
+        tableView?.estimatedSectionHeaderHeight = 0
         //tableView?.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "sectionCell")
         self.view.addSubview(tableView!)
         
@@ -64,7 +65,10 @@ class MyFavoriteTableViewController: UIViewController,UITableViewDelegate,UITabl
     func tableView(_ tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat {
         return 5*HeighPercent
     }
-   
+    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+    
+        return 50
+    }
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
     }
@@ -147,9 +151,19 @@ class MyFavoriteTableViewController: UIViewController,UITableViewDelegate,UITabl
             lable_duration.text = "Duration: 20 min"
             cell.contentView.addSubview(lable_duration)
             
-            let lable_myrating = UILabel.init(frame: CGRect(x: 10*lengthPercent, y: 120*HeighPercent, width: screenWidth - 60*lengthPercent, height: 20*lengthPercent))
-            lable_myrating.text = "My rating *****"
-            cell.contentView.addSubview(lable_myrating)
+            let backView = UIView.init(frame: CGRect.init(x: 0, y: 120*HeighPercent, width: screenWidth - 50*lengthPercent, height: 30*lengthPercent))
+            backView.backgroundColor = UIColor.white
+            cell.contentView.addSubview(backView)
+            
+            let lable_myrating = UILabel.init(frame: CGRect(x: 10*lengthPercent, y: 0*HeighPercent, width: 80*lengthPercent, height: 30*lengthPercent))
+            lable_myrating.text = "My rating"
+            // cell.contentView.addSubview(lable_myrating)
+            backView.addSubview(lable_myrating)
+            
+            let starView = RatingBar.init(frame: CGRect.init(x: 90*lengthPercent, y: 7*HeighPercent, width: 100*lengthPercent, height: 15*lengthPercent), starCount: 5, currentStar: 4.5, rateStyle: .half,tap: false) { (current) -> (Void) in
+                print(current)
+            }
+            backView.addSubview(starView)
             
             let button_favofite = UIButton.init(frame: CGRect(x: screenWidth - 50*lengthPercent, y: 20*HeighPercent, width: 30*lengthPercent, height: 24*lengthPercent))
             // button.backgroundColor = UIColor.lightGray

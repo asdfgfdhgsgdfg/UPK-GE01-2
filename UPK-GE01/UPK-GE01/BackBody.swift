@@ -38,18 +38,19 @@ public class BackBody : NSObject {
         //// Drawing Methods
     }
         
-    func drawBackBodyCanvas(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 2126, height: 3628), resizing: ResizingBehavior = .aspectFit) {
+    func drawBackBodyCanvas(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 2126, height: 3628*550/639), resizing: ResizingBehavior = .aspectFit) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
         //// Resize to Target Frame
         context.saveGState()
-        let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 2126, height: 3628), target: targetFrame)
+        let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 2126, height: 3628*550/639), target: targetFrame)
         context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
-        context.scaleBy(x: resizedFrame.width / 2126, y: resizedFrame.height / 3628)
+        context.scaleBy(x: resizedFrame.width / 2126, y: resizedFrame.height / 3628*550/639)
+       // print("---------------------------- \(resizedFrame.width),\(resizedFrame.height)")
         
         viewScalesW = resizedFrame.width / 2126
-        viewScalesH = resizedFrame.height / 3629
+        viewScalesH = resizedFrame.height / 3628*550/639
         translateX = resizedFrame.minX
         translateY = resizedFrame.minY
         

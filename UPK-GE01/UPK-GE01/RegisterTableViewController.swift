@@ -194,8 +194,12 @@ class RegisterTableViewController: UITableViewController {
             
         }
         codeTimer.activate()
-        let menu = UIAlertController(title: "", message: "test", preferredStyle: .actionSheet)
-        self.present(menu, animated: true, completion: nil)
+        DispatchQueue.main.async {
+                let menu = UIAlertController(title: "", message: "test", preferredStyle: .alert)
+                self.present(menu, animated: true, completion: nil)
+        }
+        //let menu = UIAlertController(title: "", message: "test", preferredStyle: .actionSheet)
+        //self.present(menu, animated: true, completion: nil)
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
             self.presentedViewController?.dismiss(animated: false, completion: nil)

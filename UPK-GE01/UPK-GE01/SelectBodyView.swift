@@ -15,7 +15,7 @@ class SelectBodyView : UIView{
     let frontBody = FrontBody();
     
     //默认方向为前面
-    var direction = Direction.Front
+    var direction = Direction.Back
     
     enum Direction {
         case Back
@@ -43,7 +43,7 @@ extension SelectBodyView{
         //获取到点击列表
         let clickList = (touches as NSSet).allObjects
         
-        let endTouch = clickList[clickList.count] as! UITouch
+        let endTouch = clickList[clickList.count - 1] as! UITouch
         let endPoint = endTouch.location(in: self)
         
         if(direction == Direction.Front){

@@ -28,6 +28,7 @@ class MyProgramsViewController: UIViewController,UITableViewDelegate,UITableView
         self.navigationItem.backBarButtonItem = item
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0/255.0, green: 204/255.0, blue: 204/255.0, alpha: 1)
         self.tabBarController?.tabBar.tintColor = UIColor(red: 0/255.0, green: 204/255.0, blue: 204/255.0, alpha: 1)
+        HelpButton()
        // self.tabB
         // title = "My programs"
        // self.navigationItem.title = "RelieforMe"
@@ -37,6 +38,17 @@ class MyProgramsViewController: UIViewController,UITableViewDelegate,UITableView
         //controller.tabBarItem.image = UIImage(named: image)?.withRenderingMode(.alwaysOriginal)
         // controller.tabBarItem.selectedImage = UIImage(named: selectedImage)?.withRenderingMode(.alwaysOriginal)
         // Do any additional setup after loading the view.
+    }
+    func HelpButton(){
+        let HelpBtn = UIButton.init(frame: CGRect.init(x: screenWidth - 20, y: 0, width: 20, height: 30))
+        HelpBtn.setImage(UIImage(named: "lin_help (1)"), for: .normal)
+        HelpBtn.addTarget(self, action: #selector(buttonAction_Help), for: .touchUpInside)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: HelpBtn)
+        
+    }
+    @objc func buttonAction_Help(button: UIButton){
+        let vc = HelpCenterTableViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     override func viewWillAppear(_ animated: Bool) {
         if fromWarningView == true{
@@ -95,13 +107,13 @@ class MyProgramsViewController: UIViewController,UITableViewDelegate,UITableView
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 0 {
         
-            let qrcodeVC = StartNewSessionTableViewController()
-            navigationController?.pushViewController(qrcodeVC, animated: true)
+            let vc = StartNewSessionTableViewController()
+            navigationController?.pushViewController(vc, animated: true)
         }
         if indexPath.section == 1 {
             
-            let qrcodeVC = MyFavoriteTableViewController()
-            navigationController?.pushViewController(qrcodeVC, animated: true)
+            let vc = MyFavoriteTableViewController()
+            navigationController?.pushViewController(vc, animated: true)
         }
         if indexPath.section == 2 {
             
@@ -109,19 +121,23 @@ class MyProgramsViewController: UIViewController,UITableViewDelegate,UITableView
         }
         if indexPath.section == 3 {
             
-            let qrcodeVC = RecommendTableViewController()
-            navigationController?.pushViewController(qrcodeVC, animated: true)
+            //let test = TestView.init(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
+            
+            //let test = TestView.init(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
+            //self.view.addSubview(test)
+            let vc = EvaluationViewController()//RecommendTableViewController()
+            navigationController?.pushViewController(vc, animated: true)
         }
         if indexPath.section == 4 {
             
-            let qrcodeVC = MyDiaryTableViewController()
+            let vc = MyDiaryTableViewController()
             print("\(String(describing: self.navigationController?.navigationBar.frame.size.height))------------nav height")
             print("\(self.view.frame.width)------------w height")
             print("\((self.view.frame.height))------------h height")
              print("\((screenHeight))------------h height")
             print("\((screenWidth))------------h height")
             
-            navigationController?.pushViewController(qrcodeVC, animated: true)
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
     

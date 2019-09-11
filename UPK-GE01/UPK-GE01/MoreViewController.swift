@@ -25,7 +25,19 @@ class MoreViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let item = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         self.navigationItem.backBarButtonItem = item
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0/255.0, green: 204/255.0, blue: 204/255.0, alpha: 1)
+         HelpButton()
         // Do any additional setup after loading the view.
+    }
+    func HelpButton(){
+        let HelpBtn = UIButton.init(frame: CGRect.init(x: screenWidth - 20, y: 0, width: 20, height: 30))
+        HelpBtn.setImage(UIImage(named: "lin_help (1)"), for: .normal)
+        HelpBtn.addTarget(self, action: #selector(buttonAction_Help), for: .touchUpInside)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: HelpBtn)
+        
+    }
+    @objc func buttonAction_Help(button: UIButton){
+        let vc = HelpCenterTableViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     override func viewWillAppear(_ animated: Bool) {
         if ((self.navigationController?.viewControllers.count)!) > 1{

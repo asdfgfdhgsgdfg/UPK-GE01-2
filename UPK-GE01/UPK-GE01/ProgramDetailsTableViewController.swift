@@ -56,7 +56,7 @@ class ProgramDetailsTableViewController: UITableViewController {
             height = 155*HeighPercent
         }
         
-        let label_name = UILabel.init(frame: CGRect(x: 10*lengthPercent, y: 6*HeighPercent + height, width: 300*lengthPercent, height: 20*lengthPercent))
+        let label_name = UILabel.init(frame: CGRect(x: 10*lengthPercent, y: 6*HeighPercent + height, width: 325*lengthPercent, height: 40*lengthPercent))
         if program_section < 15{
             label_name.text = program_name//Relieve_name[program_section][program_row]
         }
@@ -66,21 +66,32 @@ class ProgramDetailsTableViewController: UITableViewController {
         else{
             label_name.text = program_name//Relax_name[program_section - 23][program_row]
         }
-        //label_name.numberOfLines = 0
-        label_name.font = UIFont.boldSystemFont(ofSize: 20)
+        label_name.numberOfLines = 0
+        label_name.font = UIFont.boldSystemFont(ofSize: 15)
+        label_name.font = UIFont.boldSystemFont(ofSize: 15*lengthPercent)
         label_name.textColor = UIColor(red: 0/255.0, green: 204/255.0, blue: 204/255.0, alpha: 1)
         cell.contentView.addSubview(label_name)
        
         
-        let lable_duration = UILabel.init(frame: CGRect(x: 15*lengthPercent, y: 26*HeighPercent + height, width: 300*lengthPercent, height: 20*lengthPercent))
+        let lable_duration = UILabel.init(frame: CGRect(x: 15*lengthPercent, y: 46*HeighPercent + height, width: 300*lengthPercent, height: 20*lengthPercent))
         lable_duration.text = "Duration: 20 min"
         cell.contentView.addSubview(lable_duration)
         
-        let lable_myrating = UILabel.init(frame: CGRect(x: 15*lengthPercent, y: 46*HeighPercent + height, width: 300*lengthPercent, height: 20*lengthPercent))
-        lable_myrating.text = "My rating *****"
-        cell.contentView.addSubview(lable_myrating)
+        let backView = UIView.init(frame: CGRect.init(x: 0, y: 66*HeighPercent + height, width: screenWidth - 50, height: 30))
+        backView.backgroundColor = UIColor.white
+        cell.contentView.addSubview(backView)
         
-        let button_favofite = UIButton.init(frame: CGRect(x: 300*lengthPercent, y: 20*HeighPercent + height, width: 30*lengthPercent, height: 24*lengthPercent))
+        let lable_myrating = UILabel.init(frame: CGRect(x: 10*lengthPercent, y: 0*HeighPercent, width: 80, height: 30*lengthPercent))
+        lable_myrating.text = "My rating"
+        // cell.contentView.addSubview(lable_myrating)
+        backView.addSubview(lable_myrating)
+        
+        let starView = RatingBar.init(frame: CGRect.init(x: 90*lengthPercent, y: 7*HeighPercent, width: 100, height: 15), starCount: 5, currentStar: 4.5, rateStyle: .half,tap: false) { (current) -> (Void) in
+            print(current)
+        }
+        backView.addSubview(starView)
+        
+        let button_favofite = UIButton.init(frame: CGRect(x: screenWidth - 50*lengthPercent, y: 20*HeighPercent + height, width: 30*lengthPercent, height: 24*lengthPercent))
         // button.backgroundColor = UIColor.lightGray
         button_favofite.setImage(UIImage(named: "lin_like_grey"), for: .normal)
         //button_favofite.setTitle("test", for: .highlighted)

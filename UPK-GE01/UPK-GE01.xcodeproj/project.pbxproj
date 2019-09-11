@@ -19,7 +19,6 @@
 		08C2BA0222DC9346008867E5 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2BA0122DC9346008867E5 /* MoreViewController.swift */; };
 		08C2BA0422DC96FE008867E5 /* ProgramLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2BA0322DC96FE008867E5 /* ProgramLibraryViewController.swift */; };
 		08C2BA0622DC9856008867E5 /* ProgramLibraryUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2BA0522DC9856008867E5 /* ProgramLibraryUITableViewCell.swift */; };
-		08C2BA0822DD7725008867E5 /* HelpCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2BA0722DD7725008867E5 /* HelpCenterViewController.swift */; };
 		08C2BA0A22DD9E74008867E5 /* ControlPannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2BA0922DD9E74008867E5 /* ControlPannelViewController.swift */; };
 		08C2BA1022E01DA5008867E5 /* PLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2BA0F22E01DA5008867E5 /* PLViewController.swift */; };
 		08C2BA4522E01EDA008867E5 /* YCPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2BA1222E01ED6008867E5 /* YCPageView.swift */; };
@@ -45,10 +44,13 @@
 		08D87757230F8DF600843F9D /* Content.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08D87756230F8DF600843F9D /* Content.storyboard */; };
 		08D8775D230FE09C00843F9D /* MyProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D8775C230FE09C00843F9D /* MyProgramTableViewCell.swift */; };
 		08D8775F230FE8A000843F9D /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D8775E230FE8A000843F9D /* MoreTableViewCell.swift */; };
-		08D87761231374DF00843F9D /* HelpCenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D87760231374DF00843F9D /* HelpCenterTableViewCell.swift */; };
 		08DD3D24231F5E540094601F /* BackBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DD3D23231F5E540094601F /* BackBody.swift */; };
 		08DD3D26231F5F160094601F /* FrontBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DD3D25231F5F160094601F /* FrontBody.swift */; };
 		08DD3D28231F5F350094601F /* SelectBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DD3D27231F5F350094601F /* SelectBodyView.swift */; };
+		08DD3D2C231F69530094601F /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DD3D2B231F69530094601F /* TestViewController.swift */; };
+		08DD3D2E2325F41E0094601F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DD3D2D2325F41E0094601F /* TestView.swift */; };
+		08DD3D3123279F640094601F /* RatingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DD3D3023279F640094601F /* RatingBar.swift */; };
+		08DD3D352327A2660094601F /* EvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DD3D342327A2660094601F /* EvaluationViewController.swift */; };
 		08F4D61222F1306700707A84 /* HelpCenterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F4D61122F1306700707A84 /* HelpCenterTableViewController.swift */; };
 		08F4D61422F137ED00707A84 /* UpdateProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F4D61322F137ED00707A84 /* UpdateProfileTableViewController.swift */; };
 		08F4D61622F1380100707A84 /* ResetPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F4D61522F1380100707A84 /* ResetPasswordTableViewController.swift */; };
@@ -84,7 +86,6 @@
 		08C2BA0122DC9346008867E5 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		08C2BA0322DC96FE008867E5 /* ProgramLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramLibraryViewController.swift; sourceTree = "<group>"; };
 		08C2BA0522DC9856008867E5 /* ProgramLibraryUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramLibraryUITableViewCell.swift; sourceTree = "<group>"; };
-		08C2BA0722DD7725008867E5 /* HelpCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterViewController.swift; sourceTree = "<group>"; };
 		08C2BA0922DD9E74008867E5 /* ControlPannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPannelViewController.swift; sourceTree = "<group>"; };
 		08C2BA0F22E01DA5008867E5 /* PLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLViewController.swift; sourceTree = "<group>"; };
 		08C2BA1222E01ED6008867E5 /* YCPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YCPageView.swift; sourceTree = "<group>"; };
@@ -110,10 +111,13 @@
 		08D87756230F8DF600843F9D /* Content.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
 		08D8775C230FE09C00843F9D /* MyProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgramTableViewCell.swift; sourceTree = "<group>"; };
 		08D8775E230FE8A000843F9D /* MoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewCell.swift; sourceTree = "<group>"; };
-		08D87760231374DF00843F9D /* HelpCenterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterTableViewCell.swift; sourceTree = "<group>"; };
 		08DD3D23231F5E540094601F /* BackBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackBody.swift; sourceTree = "<group>"; };
 		08DD3D25231F5F160094601F /* FrontBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontBody.swift; sourceTree = "<group>"; };
 		08DD3D27231F5F350094601F /* SelectBodyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectBodyView.swift; sourceTree = "<group>"; };
+		08DD3D2B231F69530094601F /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		08DD3D2D2325F41E0094601F /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		08DD3D3023279F640094601F /* RatingBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingBar.swift; sourceTree = "<group>"; };
+		08DD3D342327A2660094601F /* EvaluationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationViewController.swift; sourceTree = "<group>"; };
 		08F4D61122F1306700707A84 /* HelpCenterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterTableViewController.swift; sourceTree = "<group>"; };
 		08F4D61322F137ED00707A84 /* UpdateProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileTableViewController.swift; sourceTree = "<group>"; };
 		08F4D61522F1380100707A84 /* ResetPasswordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordTableViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 		001992CD22D778D000D91121 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				08DD3D2F23279F2B0094601F /* RatingBarView */,
 				08D87753230F8D1500843F9D /* Pickerview */,
 				08C2BA1122E01E6F008867E5 /* Pageview */,
 				001992B422D6D5E900D91121 /* AppDelegate.swift */,
@@ -214,8 +219,6 @@
 				08F4D62922F4309F00707A84 /* PairingTableViewController.swift */,
 				08C2BA0322DC96FE008867E5 /* ProgramLibraryViewController.swift */,
 				08C2BA0522DC9856008867E5 /* ProgramLibraryUITableViewCell.swift */,
-				08C2BA0722DD7725008867E5 /* HelpCenterViewController.swift */,
-				08D87760231374DF00843F9D /* HelpCenterTableViewCell.swift */,
 				08C2BA0F22E01DA5008867E5 /* PLViewController.swift */,
 				08C2BA6422E044FC008867E5 /* RelieveTableViewController.swift */,
 				08C2BA6622E04521008867E5 /* StrengthenTableViewController.swift */,
@@ -242,6 +245,9 @@
 				08F4D64222FD890200707A84 /* ForgotPasswordTableViewController.swift */,
 				08F4D64422FD8C8400707A84 /* WelcomeTableViewController.swift */,
 				08D0909723153A9B00E693E6 /* TabBarViewController.swift */,
+				08DD3D2B231F69530094601F /* TestViewController.swift */,
+				08DD3D2D2325F41E0094601F /* TestView.swift */,
+				08DD3D342327A2660094601F /* EvaluationViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -295,6 +301,14 @@
 				08D87754230F8D5A00843F9D /* PickerView.swift */,
 			);
 			name = Pickerview;
+			sourceTree = "<group>";
+		};
+		08DD3D2F23279F2B0094601F /* RatingBarView */ = {
+			isa = PBXGroup;
+			children = (
+				08DD3D3023279F640094601F /* RatingBar.swift */,
+			);
+			name = RatingBarView;
 			sourceTree = "<group>";
 		};
 		0BA36E226877BC9F268C4D28 /* Frameworks */ = {
@@ -465,9 +479,8 @@
 				08C8803A22F0227F007BF6F5 /* RelaxQuestionTableViewController.swift in Sources */,
 				08C2BA6222E01EDA008867E5 /* YCPageCollectionViewLayout.swift in Sources */,
 				08D87755230F8D5A00843F9D /* PickerView.swift in Sources */,
-				08C2BA0822DD7725008867E5 /* HelpCenterViewController.swift in Sources */,
-				08D87761231374DF00843F9D /* HelpCenterTableViewCell.swift in Sources */,
 				08F4D61A22F139C600707A84 /* ContactUsTableViewController.swift in Sources */,
+				08DD3D352327A2660094601F /* EvaluationViewController.swift in Sources */,
 				08C2BA6122E01EDA008867E5 /* YCPageCollectionView.swift in Sources */,
 				08F4D62222F13A2400707A84 /* AboutSoftwareTableViewController.swift in Sources */,
 				08D8775F230FE8A000843F9D /* MoreTableViewCell.swift in Sources */,
@@ -479,15 +492,18 @@
 				08F4D64122FD70AD00707A84 /* LoginTableViewController.swift in Sources */,
 				08F4D62A22F4309F00707A84 /* PairingTableViewController.swift in Sources */,
 				08F4D62022F13A1300707A84 /* MiscSettingTableViewController.swift in Sources */,
+				08DD3D3123279F640094601F /* RatingBar.swift in Sources */,
 				08DD3D28231F5F350094601F /* SelectBodyView.swift in Sources */,
 				08D0909823153A9B00E693E6 /* TabBarViewController.swift in Sources */,
 				08F4D62422F13A3900707A84 /* LogOutTableViewController.swift in Sources */,
 				08C2BA0622DC9856008867E5 /* ProgramLibraryUITableViewCell.swift in Sources */,
+				08DD3D2C231F69530094601F /* TestViewController.swift in Sources */,
 				08C2BA0222DC9346008867E5 /* MoreViewController.swift in Sources */,
 				08F4D61C22F139E600707A84 /* PrivacyStatementTableViewController.swift in Sources */,
 				0828AE5322EEBC2E00EBCD86 /* WarningsTableViewController.swift in Sources */,
 				001992CB22D7623600D91121 /* UiViewHelper.swift in Sources */,
 				08D87752230F8CF200843F9D /* RelieforMeTableViewController.swift in Sources */,
+				08DD3D2E2325F41E0094601F /* TestView.swift in Sources */,
 				08C2BA6722E04521008867E5 /* StrengthenTableViewController.swift in Sources */,
 				001992B522D6D5E900D91121 /* AppDelegate.swift in Sources */,
 				08C2BA4522E01EDA008867E5 /* YCPageView.swift in Sources */,

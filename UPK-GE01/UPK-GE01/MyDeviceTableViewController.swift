@@ -9,7 +9,7 @@
 import UIKit
 
 class MyDeviceTableViewController: UITableViewController {
-    
+    var BTAddress = ["19:06:00:00:00:73", "19:06:00:00:00:73", "19:06:00:00:00:73"]
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "My device"
@@ -40,7 +40,7 @@ class MyDeviceTableViewController: UITableViewController {
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         
         let button1 = UIButton.init(frame: CGRect(x: 10*lengthPercent, y: 5*HeighPercent, width: 240*lengthPercent, height: 40*lengthPercent))
-        button1.setTitle("19:06:00:00:00:73", for: .normal)
+        button1.setTitle(BTAddress[indexPath.row], for: .normal)
         button1.setTitleColor(UIColor.black, for: .normal)
         button1.contentHorizontalAlignment = .left
         button1.addTarget(self, action: #selector(button1_action), for: .touchUpInside)
@@ -62,6 +62,7 @@ class MyDeviceTableViewController: UITableViewController {
         cell.contentView.addSubview(lineview2)
         
         let button3 = UIButton.init(frame: CGRect(x: 340*lengthPercent, y: 5*HeighPercent, width: 35*lengthPercent, height: 40*lengthPercent))
+        //button3.tag = indexPath.row
         button3.setImage(UIImage(named: "lin_delete"), for: .normal)
         button3.addTarget(self, action: #selector(button3_action), for: .touchUpInside)
         cell.contentView.addSubview(button3)
@@ -126,6 +127,10 @@ class MyDeviceTableViewController: UITableViewController {
         menu.addAction(option2)
         
         self.present(menu, animated: true, completion: nil)
+       // button.delete(button)
+        //button.removeFromSuperview()
+        //self.BTAddress.remove(at: button.tag)
+        //self.tableView.reloadData()
    }
     /*
     // Override to support conditional editing of the table view.

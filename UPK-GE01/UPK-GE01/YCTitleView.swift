@@ -33,7 +33,7 @@ class YCTitleView: UIView {
     private var style : YCTitleStyle
     
     //当前选中的标题的索引
-    private lazy var currentIndex : Int = 0
+    private lazy var currentIndex : Int = style.FirstTitle
     
     /// 标题组件UILabel的数组
     private lazy var titleLabels : [UILabel] = [UILabel]()

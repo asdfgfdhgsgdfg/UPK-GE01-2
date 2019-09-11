@@ -90,13 +90,17 @@ class ContactUsTableViewController: UITableViewController {
         button_OK.backgroundColor = UIColor(red: 0/255.0, green: 204/255.0, blue: 204/255.0, alpha: 1)
         // button_next.setImage(UIImage(named: "pic"), for: .normal)
         button_OK.setTitle("OK", for: .normal)
-        //button_next.addTarget(self, action: #selector(buttonAction_next), for: .touchUpInside)
+        button_OK.addTarget(self, action: #selector(buttonAction_OK), for: .touchUpInside)
         //button.setImage("pic", for: UIControl.State)
         cell.contentView.addSubview(button_OK)
         
         return cell
     }
-    
+    @objc private func buttonAction_OK(button: UIButton) {
+        
+       self.navigationController?.popToRootViewController(animated: true)
+        
+    }
     @objc private func button1_action(button: UIButton) {
         
         print("do nothing")

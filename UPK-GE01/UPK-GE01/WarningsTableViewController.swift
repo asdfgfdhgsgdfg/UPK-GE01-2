@@ -17,6 +17,8 @@ class WarningsTableViewController: UITableViewController {
         self.navigationItem.title = "Warnings"
         let item = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         self.navigationItem.backBarButtonItem = item
+        let HelpBtn = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: 30, height: 30))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: HelpBtn)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

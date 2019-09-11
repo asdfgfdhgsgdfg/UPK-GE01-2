@@ -127,7 +127,7 @@ class ForgotPasswordTableViewController: UITableViewController {
         let button_Reset = UIButton.init(frame: CGRect(x: 10*lengthPercent, y: 560*HeighPercent, width: screenWidth - 20*lengthPercent, height: 40*lengthPercent))
         button_Reset.backgroundColor = UIColor(red: 0/255.0, green: 204/255.0, blue: 204/255.0, alpha: 1)
         button_Reset.setTitle("Reset password", for: .normal)
-        Button1.addTarget(self, action: #selector(Button1_action), for: .touchUpInside)
+        button_Reset.addTarget(self, action: #selector(ButtonReset_action), for: .touchUpInside)
         cell.contentView.addSubview(button_Reset)
         
         return cell
@@ -187,18 +187,25 @@ class ForgotPasswordTableViewController: UITableViewController {
             
         }
         codeTimer.activate()
-        let menu = UIAlertController(title: "", message: "test", preferredStyle: .alert)
-        self.present(menu, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            let menu = UIAlertController(title: "", message: "test", preferredStyle: .alert)
+            self.present(menu, animated: true, completion: nil)
+        }
+        //let menu = UIAlertController(title: "", message: "test", preferredStyle: .alert)
+        //self.present(menu, animated: true, completion: nil)
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
             self.presentedViewController?.dismiss(animated: false, completion: nil)
         }
     }
-    @objc func Button1_Reset(button: UIButton){
+    @objc func ButtonReset_action(button: UIButton){
         
-       // let vc = PLViewController()
-        //vc.index = 4
-       // self.navigationController?.pushViewController(vc, animated: true)
+        let vc = PLViewController()
+        vc.index = 5
+        self.navigationController?.pushViewController(vc, animated: true)
+       // self.dismiss(animated: true, completion: nil)
+        
+        //self.navigationController?.popToRootViewController(animated: true)
     }
     /*
      // Override to support conditional editing of the table view.

@@ -9,7 +9,8 @@
 import UIKit
 
 class PairingTableViewController: UITableViewController {
-
+    
+    var index = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Pairing"
@@ -71,9 +72,15 @@ class PairingTableViewController: UITableViewController {
        // self.present(vc, animated: true, completion: nil)
         //self.navigationController?.present(vc, animated: true, completion: nil)
         //self.navigationController?.pushViewController(vc, animated: true)
-        let deststoryboard = UIStoryboard(name: "Content", bundle: nil)
-        let destvc = deststoryboard.instantiateViewController(withIdentifier: "MainInterface")
-        self.present(destvc, animated: true, completion: nil)
+        if index == 1{
+            self.navigationController?.popToRootViewController(animated: true)
+            index = 0            
+        }
+        else{
+            let deststoryboard = UIStoryboard(name: "Content", bundle: nil)
+            let destvc = deststoryboard.instantiateViewController(withIdentifier: "MainInterface")
+            self.present(destvc, animated: true, completion: nil)
+        }
       
         
     }

@@ -13,6 +13,9 @@ class SelectAreaTableViewController: UITableViewController {
     var index = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        //let testview = UIStoryboard(name: "TestStoryBoard", bundle: nil).instantiateViewController(withIdentifier: "SelectBodyView")
+       
+       // addChild(testview)
         //screenWidth = self.view.frame.width
         //screenHeight = self.view.frame.height
         let item = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
@@ -23,8 +26,6 @@ class SelectAreaTableViewController: UITableViewController {
        else{
             self.navigationItem.title = "Select Treatment Area"
         }
-        
-       
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -45,7 +46,11 @@ class SelectAreaTableViewController: UITableViewController {
         let cell = UITableViewCell.init(style: .default, reuseIdentifier: nil)     
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         
-        let button_next = UIButton.init(frame: CGRect(x: 10*lengthPercent, y: 550*HeighPercent, width: screenWidth - 20*lengthPercent, height: 40*lengthPercent))
+        let selectView = SelectBodyView.init(frame: CGRect(x: 0, y: 40, width: screenWidth, height: 550))
+        selectView.backgroundColor = .white
+        cell.contentView.addSubview(selectView)
+        
+        let button_next = UIButton.init(frame: CGRect(x: 10*lengthPercent, y: 560*HeighPercent, width: screenWidth - 20*lengthPercent, height: 40*lengthPercent))
         button_next.backgroundColor = UIColor(red: 0/255.0, green: 204/255.0, blue: 204/255.0, alpha: 1)
        // button_next.setImage(UIImage(named: "pic"), for: .normal)
         button_next.setTitle("Next", for: .normal)
